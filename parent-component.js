@@ -1,16 +1,19 @@
-//Parent componenet to demonstrate the relationship between components with regards to // props
+//Parent componenet to demonstrate the relationship between components with regards to props
 
-var FriendsContainer - React.createClass({
+
+//Sets the initial states of the component FriendsContainer's attributes.
+var FriendsContainer = React.createClass({
 	getInitialState: function(){
 		return{
 			name:'Benedict Wagnall'
-			friends: ['Huy Nguyen', 'Vilde Regine Stugaard Reksnes', 'Robert Loveless' ] 
+			friends: ['Huy Nguyen', 'Vilde Regine Stugaard Reksnes', 'Robert Loveless'] 
 		}	
 	},
 
 
 
 //Calls the name from state in the render (set above), as well as the friends list.
+//Creates the names prop from the friends attribute.
 	render: function(){
 		return(
 		<div>

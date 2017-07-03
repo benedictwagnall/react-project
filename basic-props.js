@@ -1,7 +1,6 @@
 //Very simple example displaying the use of props in React.
 
 
-//
 var HelloUser = React.createClass({ 
 	render: function() {
 		return (
@@ -10,4 +9,4 @@ var HelloUser = React.createClass({
 	}	
 });
 
-ReactDOM.render( <HelloUser name="Tyler"/>, document.getElementById('app'));
+ReactDOM.render( <HelloUser name="Benedict"/>, document.getElementById('app') );

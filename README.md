@@ -33,11 +33,12 @@ In the code example, handleChange calls setState with the parameter e.target.val
 
 +The user enters something into the text box, (x).
 +onChange notices this and responds by calling handleChange with the new input (x) as a parameter.
-+handleChange calls setState on the specified attribute (username) using the (x) input.
++handleChange calls setState on the specified attribute (username) supplying the (x) input.
 +React re-renders the virtualDOM.
 +React diffs the VirtualDOM and the actual DOM.
 +actual DOM is updated.
-+username is now (x).
++username is now displayed as (x).
+
 
 'Mr Data?'
 
@@ -48,9 +49,29 @@ In the code example, handleChange calls setState with the parameter e.target.val
 
 
 
----child-component:
+---basic-props:
+
+Props are the means by which we tranfer state from parent to child. In the example code we can use {this.props.name} to access a prop (property). in the example code, the name prop is created within the tag <HelloUser name='Benedict' />. It is then called again by {this.props.name}, this is not a parent-child heirarchy as the prop is being called within the component - hence the use of the 'this' keyword.
+
+
 
 ---parent-component:
+Parent component is FriendsContainer.
+FriendsContainer has the states name and friends.
+In the render function of FriendsContainer, we create a new child component called ShowList.
+Showlist is given the prop name which is populated with the contents of the friends state.
+FriendsContainer gives ShowList the prop, names, containing one of its own states.
+
+
+---child-component 
+Child component is ShowList.
+Here, the names prop is used to populate a new list called listItems
+listItems is the same but has <li> tags wrapped around the elements to allow it to be displayed in HTML.
+listItems is returned by the render of ShowList, which is called during the render of FriendsContainer.
+
+
+
+
 
 Work in progress!
 
