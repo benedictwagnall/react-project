@@ -10,7 +10,7 @@ var HelloUser = React.createClass({
 
 	},
 
-//		
+//Setting a state and calling for it using the this keyword		
 	render: function() {
 		return(
 
