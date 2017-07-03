@@ -1,7 +1,7 @@
 var HelloUser = React.createClass({ 
 
 
-//Returns an object that contains state or data of our component
+//Returns an object that contains state of data of our component
 	getIinitialState: function(){
 
 		return{
@@ -10,7 +10,7 @@ var HelloUser = React.createClass({
 
 	},
 
-//Setting a state and calling for it using the this keyword		
+//Setting a state and calling for it using the this keyword, returning it's own state. Return hello benedict		
 	render: function() {
 		return(
 
