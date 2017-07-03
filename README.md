@@ -26,11 +26,27 @@ State is as it sounds: some state of being that a component is exhibiting at any
 
 ---hello-world-with-modifiable-states:
 
-We need to be able to update the state so that things can change. eg: A simple webpage with a text input and submit button that displays what you enter into the box. When you press submit, the state of the component (the form element 'input') is updated, then the DOM is re rendered with the new information. This is done with the setState method. handleChange...
+We need to be able to update the state so that things can change. eg: A simple webpage with a text input and submit button that displays what you enter into the box. When you press submit, the state of the component (the form element 'input') is updated, then the DOM is re rendered with the new information. This is done with the setState method. Whenever setState is called, the VirtualDOM re-renders, diffs, and updates the real DOM. When state is updated we need to update the DOM to represent this.
 
-''
+In the code example, handleChange calls setState with the parameter e.target.value (the contents of the input field). handleChange is called thanks to the actions of onChange, a js event handler (similar to onClick etc).
+ So: 
 
----basic-props:
++The user enters something into the text box, (x).
++onChange notices this and responds by calling handleChange with the new input (x) as a parameter.
++handleChange calls setState on the specified attribute (username) using the (x) input.
++React re-renders the virtualDOM.
++React diffs the VirtualDOM and the actual DOM.
++actual DOM is updated.
++username is now (x).
+
+'Mr Data?'
+
+'Yes, Captain?'
+
+'Never mind.'
+
+
+
 
 ---child-component:
 

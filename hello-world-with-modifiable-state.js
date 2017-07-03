@@ -1,6 +1,3 @@
-
-
-
 var HelloUser = React.createClass({ 
 	getInitialState: function(){
 		return {
@@ -33,3 +30,6 @@ var HelloUser = React.createClass({
 //4. React re-renders the Virtual DOM.
 //5. React Diffs the change.
 //6. Real DOM is updated.
+//
+//
+
