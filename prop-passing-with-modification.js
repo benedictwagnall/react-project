@@ -33,7 +33,7 @@ var FriendsContainer = React.createClass({
 
 				//Components:
 				<AddFriend addNew={this.addFriend} />
-				<ShowList names={this.state.friends /}>
+				<ShowList names={this.state.friends} />
 			
 			</div>
 		)
@@ -65,7 +65,9 @@ var FriendsContainer = React.createClass({
 
 	//Called onClick for the button - add new friend
 	handleAddNew: function(){
+		//Call the addFriend method with the current state of newFriend
 		this.props.addNew(this.state.newFriend);
+		//Clear the newFriend string for the next.
 		this.setState({
 			newFriend: ''
 	 });
