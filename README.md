@@ -85,12 +85,24 @@ The ShowList component has the prop 'name' which contains the 'friends' state fr
 
 
 Walkthrough  
-Text box is created with an empty string 'newFriend'.
+Text box is created with an empty string 'newFriend'.  
 A user inputs a new string into the box and presses the button.
+
 The new input fires the onChange event handler which updates the empty string with whatever the user has entered
 The user then presses the button which fires the onClick event handler, calling the handleAddNew method
 handleAddNew uses the prop addNew to access the addFriend method, supplying it with the updated newFriend string, clearing it afterwards.
 The addFriend method takes this string and appends it to the current list of friends. addFriend is a method of the FriendContainer parent class, we only have access to it because the prop was passed down to the AddNew component. 
+
+
+	---default-props---
+
+This just specifies a 'plan B' if nothing is passed as a prop. In the example: an empty array.
+
+	---type-checking---
+
+Specify which types of prop are allowed, or required.
+
+
 
 
 
