@@ -73,6 +73,24 @@ listItems is the same but has <li> tags wrapped around the elements to allow it 
 listItems is returned by the render of ShowList, which is called during the render of FriendsContainer.
 
 
+	---prop-passing-with-modification---
+
+---Prop Stuff:
+
+AddFriend
+The parent component is FriendsContainer, which has the method addFriend. This is where the friends list is stored, so any manipulation has to be done here. The AddFriend component has the addNew prop, which contains access to the method addFriend from its parent (FriendsContainer).
+
+ShowList
+The ShowList component has the prop 'name' which contains the 'friends' state from FriendsContainer--- 
+
+
+Walkthrough
+Text box is created with an empty string 'newFriend'.
+A user inputs a new string into the box and presses the button.
+The new input fires the onChange event handler which updates the empty string with whatever the user has entered
+The user then presses the button which fires the onClick event handler, calling the handleAddNew method
+handleAddNew uses the prop addNew to access the addFriend method, supplying it with the updated newFriend string, clearing it afterwards.
+The addFriend method takes this string and appends it to the current list of friends. addFriend is a method of the FriendContainer parent class, we only have access to it because the prop was passed down to the AddNew component. 
 
 
 
