@@ -96,11 +96,42 @@ The addFriend method takes this string and appends it to the current list of fri
 
 	---default-props---
 
-This just specifies a 'plan B' if nothing is passed as a prop. In the example: an empty array.
+This just specifies a 'plan B' if nothing is passed as a prop. In the example: an appropriately name empty array, is created if nothing is passed.
 
 	---type-checking---
 
 Specify which types of prop are allowed, or required.
+
+
+	---Life-Cycles---
+Initial(mounting)  
+
+	componentWillMount: This is where you do some things that need to be done at the start
+	of your process, i.e. setting up database connections  
+	  
+	componentWillUnmount: This is for things that need to take place at the start, but after 	the initial DOM render, If you needed some information via AJAX, to mount onto the DOM, 	you would do this here.  
+  
+  
+Updates  
+	
+	componentWillReceiveProps: Whenever a prop is changed, this is called. Still unsure as t	o the use of this.
+
+Unmounting
+
+	componentWillUnmount: Invoked immediately before a component is unmount from the DOM. 		Any required cleanup should go here
+
+The chain of this Life Cycles (plus others) is as follows:
+
+willMount >> didMount >> willReceiveProps >> shouldUpdate >> willUpdate >> render >> didUpdate >> willUnmount
+
+
+
+
+
+
+
+
+
 
 
 
