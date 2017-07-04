@@ -32,13 +32,13 @@ We need to be able to update the state so that things can change. eg: A simple w
 In the code example, handleChange calls setState with the parameter e.target.value (the contents of the input field). handleChange is called thanks to the actions of onChange, a js event handler (similar to onClick etc).
  So: 
 
-+The user enters something into the text box, (x).
-+onChange notices this and responds by calling handleChange with the new input (x) as a parameter.
-+handleChange calls setState on the specified attribute (username) supplying the (x) input.
-+React re-renders the virtualDOM.
-+React diffs the VirtualDOM and the actual DOM.
-+actual DOM is updated.
-+username is now displayed as (x).
+\r The user enters something into the text box, (x).
+\r onChange notices this and responds by calling handleChange with the new input (x) as a parameter.
+\r handleChange calls setState on the specified attribute (username) supplying the (x) input.
+\r React re-renders the virtualDOM.
+\r React diffs the VirtualDOM and the actual DOM.
+\r actual DOM is updated.
+\r username is now displayed as (x).
 
 
 'Mr Data?'
